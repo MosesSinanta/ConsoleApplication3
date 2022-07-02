@@ -215,6 +215,7 @@ void q15(std::vector<char> vct, int num) {
 	if (vct[num - 1] == '.') {
 		vct.at(num - 1) = '0';
 		num = num + 1;
+		display(vct, num);
 	}
 	else if (vct[num - 1] == '0') {
 		num = num + 1;
