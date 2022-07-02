@@ -6,12 +6,12 @@
 #else
 	#include <unistd.h>
 #endif
-#include "Multiplication.h"
+#include "Factorial.h"
 
 int main() {
 	//Declare variables
 	int i;
-	int num{ 1 };
+	int num{1};
 	std::string str{};
 
 	//Input
@@ -25,7 +25,7 @@ int main() {
 		vct.push_back(str[i]);
 
 	//Output
-	q0(vct, num);
+	fac_q0(vct, num);
 	std::cin >> str;
 
 	//Return values
