@@ -29,7 +29,6 @@ void q13(std::vector<char> vct, int num);
 void q14(std::vector<char> vct, int num);
 void q15(std::vector<char> vct, int num);
 
-//List of states
 void q0(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == '1') {
@@ -65,7 +64,7 @@ void q2(std::vector<char> vct, int num) {
 void q3(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == '0') {
-		vct.at(num - 1) = '.';
+		vct.at(num - 1) = ' ';
 		num = num - 1;
 		q4(vct, num);
 	}
@@ -98,7 +97,7 @@ void q5(std::vector<char> vct, int num) {
 void q6(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == '0') {
-		vct.at(num - 1) = '.';
+		vct.at(num - 1) = ' ';
 		num = num + 1;
 		q7(vct, num);
 	}
@@ -122,7 +121,7 @@ void q7(std::vector<char> vct, int num) {
 
 void q8(std::vector<char> vct, int num) {
 	display(vct, num);
-	if (vct[num - 1] == '.') {
+	if (vct[num - 1] == ' ') {
 		vct.at(num - 1) = '0';
 		num = num - 1;
 		q9(vct, num);
@@ -136,7 +135,7 @@ void q8(std::vector<char> vct, int num) {
 void q9(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == '0') {
-		vct.at(num - 1) = '.';
+		vct.at(num - 1) = ' ';
 		num = num - 1;
 		q10(vct, num);
 	}
@@ -160,7 +159,7 @@ void q10(std::vector<char> vct, int num) {
 
 void q11(std::vector<char> vct, int num) {
 	display(vct, num);
-	if (vct[num - 1] == '.') {
+	if (vct[num - 1] == ' ') {
 		vct.at(num - 1) = '0';
 		num = num + 1;
 		q6(vct, num);
@@ -212,10 +211,11 @@ void q14(std::vector<char> vct, int num) {
 
 void q15(std::vector<char> vct, int num) {
 	display(vct, num);
-	if (vct[num - 1] == '.') {
+	if (vct[num - 1] == ' ') {
 		vct.at(num - 1) = '0';
 		num = num + 1;
 		display(vct, num);
+		std::cout << "We're good to go!";
 	}
 	else if (vct[num - 1] == '0') {
 		num = num + 1;

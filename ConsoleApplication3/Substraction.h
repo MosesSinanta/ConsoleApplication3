@@ -25,6 +25,7 @@ void q9(std::vector<char> vct, int num);
 void q10(std::vector<char> vct, int num);
 void q11(std::vector<char> vct, int num);
 void q12(std::vector<char> vct, int num);
+void q13(std::vector<char> vct, int num);
 
 void q0(std::vector<char> vct, int num) {
 	display(vct, num);
@@ -150,7 +151,6 @@ void q9(std::vector<char> vct, int num) {
 void q10(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == ' ') {
-		vct.at(num - 1) = '0';
 		num = num - 1;
 		q11(vct, num);
 	}
@@ -163,16 +163,25 @@ void q10(std::vector<char> vct, int num) {
 void q11(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == '0') {
-		num = num - 1;
-		q11(vct, num);
-	}
-	else if (vct[num - 1] == '1') {
+		vct.at(num - 1) = ' ';
 		num = num - 1;
 		q12(vct, num);
 	}
 }
 
 void q12(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num - 1;
+		q12(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		num = num - 1;
+		q13(vct, num);
+	}
+}
+
+void q13(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == ' ') {
 		vct.at(num - 1) = '0';
@@ -181,6 +190,6 @@ void q12(std::vector<char> vct, int num) {
 	}
 	else if (vct[num - 1] == '0') {
 		num = num - 1;
-		q12(vct, num);
+		q13(vct, num);
 	}
 }
