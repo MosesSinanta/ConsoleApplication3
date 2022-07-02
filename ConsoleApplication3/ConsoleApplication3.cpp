@@ -6,7 +6,7 @@
 #else
 	#include <unistd.h>
 #endif
-#include "Addition.h"
+#include "Multiplication.h"
 
 int main() {
 	//Declare variables

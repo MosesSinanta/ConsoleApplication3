@@ -130,9 +130,8 @@ void q8(std::vector<char> vct, int num) {
 		num = num + 1;
 		q9(vct, num);
 	}
-	else if (vct[num - 1] == '1') {
+	else if (vct[num - 1] == '1')
 		std::cout << "We're good to go!";
-	}
 }
 
 void q9(std::vector<char> vct, int num) {

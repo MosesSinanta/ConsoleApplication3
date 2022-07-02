@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Division.h" />
     <ClInclude Include="Addition.h" />
+    <ClInclude Include="Multiplication.h" />
     <ClInclude Include="Substraction.h" />
   </ItemGroup>
   <ItemGroup>

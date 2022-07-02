@@ -29,6 +29,9 @@
     <ClInclude Include="Substraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Multiplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt">
