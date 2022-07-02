@@ -28,10 +28,6 @@ void q12(std::vector<char> vct, int num);
 void q13(std::vector<char> vct, int num);
 void q14(std::vector<char> vct, int num);
 void q15(std::vector<char> vct, int num);
-void fs(std::vector<char> vct, int num) {
-	display(vct, num);
-	std::cout << "We did it!" << std::endl;
-}
 
 //List of states
 void q0(std::vector<char> vct, int num) {
@@ -219,7 +215,6 @@ void q15(std::vector<char> vct, int num) {
 	if (vct[num - 1] == '.') {
 		vct.at(num - 1) = '0';
 		num = num + 1;
-		fs(vct, num);
 	}
 	else if (vct[num - 1] == '0') {
 		num = num + 1;

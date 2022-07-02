@@ -17,7 +17,7 @@ int main() {
 	//Input
 	std::cout << "Enter input:" << std::endl;
 	std::cin >> str;
-	system("CLS");
+		//system("CLS");
 
 	//Declare variables
 	std::vector<char> vct;
