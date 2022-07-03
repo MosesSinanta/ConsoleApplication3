@@ -1,4 +1,3 @@
-#include "Multiplication.h"
 void fac_q1(std::vector<char> vct, int num);
 void fac_q2(std::vector<char> vct, int num);
 void fac_q3(std::vector<char> vct, int num);

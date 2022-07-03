@@ -1,18 +1,4 @@
-void display(std::vector<char> vct, int num) {
-	//Declare variables
-	int i;
-
-	//Output
-	for (i = 0; i < vct.size(); i++)
-		std::cout << vct[i];
-	std::cout << std::endl;
-	for (i = 0; i < num - 1; i++)
-		std::cout << " ";
-	std::cout << "^" << std::endl;
-	Sleep(100);
-	//system("CLS");
-}
-
+void display(std::vector<char> vct, int num);
 void add_q1(std::vector<char> vct, int num);
 void add_q2(std::vector<char> vct, int num);
 void add_q3(std::vector<char> vct, int num);
@@ -26,7 +12,7 @@ void add_q10(std::vector<char> vct, int num);
 void add_q11(std::vector<char> vct, int num);
 void add_q12(std::vector<char> vct, int num);
 
-voidadd_q0(std::vector<char> vct, int num) {
+void add_q0(std::vector<char> vct, int num) {
 	display(vct, num);
 	if (vct[num - 1] == '1') {
 		num = num + 1;
