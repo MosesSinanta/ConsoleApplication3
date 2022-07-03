@@ -11,6 +11,7 @@
 #include "Division.h"
 #include "Multiplication.h"
 #include "Factorial.h"
+#include "PowerTwo.h"
 #include "Display.h"
 
 typedef void (*arr) (std::vector<char> vct, int num);
@@ -29,7 +30,8 @@ int main() {
 		sub_q0,
 		mul_q0,
 		div_q0,
-		fac_q0
+		fac_q0,
+		pow_q0
 	};
 
 	//Input
@@ -42,6 +44,7 @@ int main() {
 	std::cout << "[3] Perkalian" << std::endl;
 	std::cout << "[4] Pembagian" << std::endl;
 	std::cout << "[5] Faktorial" << std::endl;
+	std::cout << "[6] Pangkat 2" << std::endl;
 	std::cout << std::endl;
 	std::cin >> num;
 	std::cout << std::endl;
@@ -71,6 +74,11 @@ int main() {
 		std::cout << "[Faktorial]" << std::endl;
 		std::cout << "Contoh input : 1(0^a)1" << std::endl;
 		std::cout << "Contoh output: 1(0^a)1...1(0^a!)" << std::endl;
+		break;
+	case 6:
+		std::cout << "[Pangkat 2]" << std::endl;
+		std::cout << "Contoh input : 1(0^a)1" << std::endl;
+		std::cout << "Contoh output: 1(0^a)1(0^(2^a))" << std::endl;
 		break;
 	}
 	std::cout << "Masukkan input: ";

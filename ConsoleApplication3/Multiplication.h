@@ -1,143 +1,143 @@
-void display(std::vector<char> vct, int num);
-void mul_q1(std::vector<char> vct, int num);
-void mul_q2(std::vector<char> vct, int num);
-void mul_q3(std::vector<char> vct, int num);
-void mul_q4(std::vector<char> vct, int num);
-void mul_q5(std::vector<char> vct, int num);
-void mul_q6(std::vector<char> vct, int num);
-void mul_q7(std::vector<char> vct, int num);
-void mul_q8(std::vector<char> vct, int num);
-void mul_q9(std::vector<char> vct, int num);
-void mul_q10(std::vector<char> vct, int num);
+void display(std::vector<char> v, int n);
+void mul_q1(std::vector<char> v, int n);
+void mul_q2(std::vector<char> v, int n);
+void mul_q3(std::vector<char> v, int n);
+void mul_q4(std::vector<char> v, int n);
+void mul_q5(std::vector<char> v, int n);
+void mul_q6(std::vector<char> v, int n);
+void mul_q7(std::vector<char> v, int n);
+void mul_q8(std::vector<char> v, int n);
+void mul_q9(std::vector<char> v, int n);
+void mul_q10(std::vector<char> v, int n);
 
-void mul_q0(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '1') {
-		num = num + 1;
-		mul_q1(vct, num);
+void mul_q0(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '1') {
+		n = n + 1;
+		mul_q1(v, n);
 	}
 }
 
-void mul_q1(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '0') {
-		vct.at(num - 1) = ' ';
-		num = num + 1;
-		mul_q2(vct, num);
+void mul_q1(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '0') {
+		v.at(n - 1) = ' ';
+		n = n + 1;
+		mul_q2(v, n);
 	}
-	else if (vct[num - 1] == '1') {
-		num = num + 1;
-		mul_q10(vct, num);
-	}
-}
-
-void mul_q2(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '0') {
-		num = num + 1;
-		mul_q2(vct, num);
-	}
-	else if (vct[num - 1] == '1') {
-		num = num + 1;
-		mul_q3(vct, num);
+	else if (v[n - 1] == '1') {
+		n = n + 1;
+		mul_q10(v, n);
 	}
 }
 
-void mul_q3(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '0') {
-		vct.at(num - 1) = ' ';
-		num = num + 1;
-		mul_q4(vct, num);
+void mul_q2(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '0') {
+		n = n + 1;
+		mul_q2(v, n);
 	}
-	else if (vct[num - 1] == '1') {
-		num = num - 1;
-		mul_q8(vct, num);
-	}
-}
-
-void mul_q4(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '0') {
-		num = num + 1;
-		mul_q4(vct, num);
-	}
-	else if (vct[num - 1] == '1') {
-		vct.push_back(' ');
-		num = num + 1;
-		mul_q5(vct, num);
+	else if (v[n - 1] == '1') {
+		n = n + 1;
+		mul_q3(v, n);
 	}
 }
 
-void mul_q5(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == ' ') {
-		vct.at(num - 1) = '0';
-		num = num - 1;
-		mul_q6(vct, num);
+void mul_q3(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '0') {
+		v.at(n - 1) = ' ';
+		n = n + 1;
+		mul_q4(v, n);
 	}
-	else if (vct[num - 1] == '0') {
-		num = num + 1;
-		mul_q5(vct, num);
-	}
-}
-
-void mul_q6(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '0') {
-		num = num - 1;
-		mul_q6(vct, num);
-	}
-	else if (vct[num - 1] == '1') {
-		num = num - 1;
-		mul_q7(vct, num);
+	else if (v[n - 1] == '1') {
+		n = n - 1;
+		mul_q8(v, n);
 	}
 }
 
-void mul_q7(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == ' ') {
-		vct.at(num - 1) = '0';
-		num = num + 1;
-		mul_q3(vct, num);
+void mul_q4(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '0') {
+		n = n + 1;
+		mul_q4(v, n);
 	}
-	else if (vct[num - 1] == '0') {
-		num = num - 1;
-		mul_q7(vct, num);
-	}
-}
-
-void mul_q8(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '0') {
-		num = num - 1;
-		mul_q8(vct, num);
-	}
-	else if (vct[num - 1] == '1') {
-		num = num - 1;
-		mul_q9(vct, num);
+	else if (v[n - 1] == '1') {
+		v.push_back(' ');
+		n = n + 1;
+		mul_q5(v, n);
 	}
 }
 
-void mul_q9(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == ' ') {
-		vct.at(num - 1) = '0';
-		num = num + 1;
-		mul_q1(vct, num);
+void mul_q5(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == ' ') {
+		v.at(n - 1) = '0';
+		n = n - 1;
+		mul_q6(v, n);
 	}
-	else if (vct[num - 1] == '0') {
-		num = num - 1;
-		mul_q9(vct, num);
+	else if (v[n - 1] == '0') {
+		n = n + 1;
+		mul_q5(v, n);
 	}
 }
 
-void mul_q10(std::vector<char> vct, int num) {
-	display(vct, num);
-	if (vct[num - 1] == '0') {
-		num = num + 1;
-		mul_q10(vct, num);
+void mul_q6(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '0') {
+		n = n - 1;
+		mul_q6(v, n);
 	}
-	else if (vct[num - 1] == '1')
+	else if (v[n - 1] == '1') {
+		n = n - 1;
+		mul_q7(v, n);
+	}
+}
+
+void mul_q7(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == ' ') {
+		v.at(n - 1) = '0';
+		n = n + 1;
+		mul_q3(v, n);
+	}
+	else if (v[n - 1] == '0') {
+		n = n - 1;
+		mul_q7(v, n);
+	}
+}
+
+void mul_q8(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '0') {
+		n = n - 1;
+		mul_q8(v, n);
+	}
+	else if (v[n - 1] == '1') {
+		n = n - 1;
+		mul_q9(v, n);
+	}
+}
+
+void mul_q9(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == ' ') {
+		v.at(n - 1) = '0';
+		n = n + 1;
+		mul_q1(v, n);
+	}
+	else if (v[n - 1] == '0') {
+		n = n - 1;
+		mul_q9(v, n);
+	}
+}
+
+void mul_q10(std::vector<char> v, int n) {
+	display(v, n);
+	if (v[n - 1] == '0') {
+		n = n + 1;
+		mul_q10(v, n);
+	}
+	else if (v[n - 1] == '1')
 		std::cout << "We're good to go!";
 }
