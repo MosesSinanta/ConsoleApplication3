@@ -1,3 +1,5 @@
+#include "FactorialMultiplication.h"
+void display(std::vector<char> vct, int num);
 void fac_q1(std::vector<char> vct, int num);
 void fac_q2(std::vector<char> vct, int num);
 void fac_q3(std::vector<char> vct, int num);
@@ -8,6 +10,10 @@ void fac_q7(std::vector<char> vct, int num);
 void fac_q8(std::vector<char> vct, int num);
 void fac_q9(std::vector<char> vct, int num);
 void fac_q10(std::vector<char> vct, int num);
+void fac_qc1(std::vector<char> vct, int num);
+void fac_qc2(std::vector<char> vct, int num);
+void fac_qc3(std::vector<char> vct, int num);
+void fac_qc4(std::vector<char> vct, int num);
 void fac_q11(std::vector<char> vct, int num);
 void fac_q12(std::vector<char> vct, int num);
 void fac_q13(std::vector<char> vct, int num);
@@ -66,8 +72,9 @@ void fac_q3(std::vector<char> vct, int num) {
 		fac_q4(vct, num);
 	}
 	else if (vct[num - 1] == '0') {
-		num = num - 1;
-		fac_q4(vct, num);
+		vct.push_back(' ');
+		num = num + 1;
+		fac_q3(vct, num);
 	}
 }
 
@@ -137,6 +144,197 @@ void fac_q9(std::vector<char> vct, int num) {
 	}
 	else if (vct[num - 1] == '1') {
 		num = num + 1;
-		mul_q1(vct, num);
+		facmul_q1(vct, num);
+	}
+}
+
+void fac_q10(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		vct.at(num - 1) = ' ';
+		num = num + 1;
+		fac_q11(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		vct.at(num - 1) = ' ';
+		num = num - 1;
+		fac_q24(vct, num);
+	}
+}
+
+void fac_q11(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num + 1;
+		fac_q11(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		num = num + 1;
+		fac_q12(vct, num);
+	}
+}
+
+void fac_q12(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == ' ') {
+		vct.push_back(' ');
+		vct.at(num - 1) = '1';
+		num = num + 1;
+		fac_q13(vct, num);
+	}
+	else if (vct[num - 1] == '0') {
+		num = num + 1;
+		fac_q12(vct, num);
+	}
+}
+
+void fac_q13(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == ' ') {
+		vct.at(num - 1) = '0';
+		num = num - 1;
+		fac_q14(vct, num);
+	}
+}
+
+void fac_q14(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num - 1;
+		fac_q14(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		num = num - 1;
+		fac_q15(vct, num);
+	}
+}
+
+void fac_q15(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num - 1;
+		fac_q15(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		num = num - 1;
+		fac_q16(vct, num);
+	}
+}
+
+void fac_q16(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == ' ') {
+		vct.at(num - 1) = '0';
+		num = num + 1;
+		fac_q17(vct, num);
+	}
+	else if (vct[num - 1] == '0') {
+		num = num - 1;
+		fac_q16(vct, num);
+	}
+}
+
+void fac_q17(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		vct.at(num - 1) = ' ';
+		num = num + 1;
+		fac_q18(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		num = num + 1;
+		fac_q21(vct, num);
+	}
+}
+
+void fac_q18(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num + 1;
+		fac_q18(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		num = num + 1;
+		fac_q19(vct, num);
+	}
+}
+
+void fac_q19(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num + 1;
+		fac_q19(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		num = num + 1;
+		fac_q20(vct, num);
+	}
+}
+
+void fac_q20(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == ' ') {
+		vct.at(num - 1) = '0';
+		num = num - 1;
+		fac_q14(vct, num);
+	}
+	else if (vct[num - 1] == '0') {
+		num = num + 1;
+		fac_q20(vct, num);
+	}
+}
+
+void fac_q21(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num + 1;
+		fac_q21(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		vct.push_back(' ');
+		num = num + 1;
+		fac_q22(vct, num);
+	}
+}
+
+void fac_q22(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == ' ') {
+		num = num - 1;
+		fac_q23(vct, num);
+	}
+	else if (vct[num - 1] == '0') {
+		num = num + 1;
+		fac_q22(vct, num);
+	}
+}
+
+void fac_q23(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		vct.at(num - 1) = '1';
+		num = num - 1;
+		fac_q8(vct, num);
+	}
+}
+
+void fac_q24(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '1') {
+		vct.at(num - 1) = ' ';
+		num = num - 1;
+		fac_q25(vct, num);
+	}
+}
+
+void fac_q25(std::vector<char> vct, int num) {
+	display(vct, num);
+	if (vct[num - 1] == '0') {
+		num = num - 1;
+		fac_q25(vct, num);
+	}
+	else if (vct[num - 1] == '1') {
+		display(vct, num);
+		std::cout << "We're good to go!";
 	}
 }

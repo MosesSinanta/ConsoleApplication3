@@ -146,6 +146,7 @@
     <ClInclude Include="Addition.h" />
     <ClInclude Include="Factorial.h" />
     <ClInclude Include="Display.h" />
+    <ClInclude Include="FactorialMultiplication.h" />
     <ClInclude Include="Multiplication.h" />
     <ClInclude Include="Substraction.h" />
   </ItemGroup>

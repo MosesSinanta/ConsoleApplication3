@@ -8,8 +8,9 @@
 #endif
 #include "Addition.h"
 #include "Substraction.h"
-#include "Multiplication.h"
 #include "Division.h"
+#include "Multiplication.h"
+#include "Factorial.h"
 #include "Display.h"
 
 typedef void (*arr) (std::vector<char> vct, int num);
@@ -27,7 +28,8 @@ int main() {
 		add_q0,
 		sub_q0,
 		mul_q0,
-		div_q0
+		div_q0,
+		fac_q0
 	};
 
 	//Input
@@ -39,6 +41,7 @@ int main() {
 	std::cout << "[2] Pengurangan" << std::endl;
 	std::cout << "[3] Perkalian" << std::endl;
 	std::cout << "[4] Pembagian" << std::endl;
+	std::cout << "[5] Faktorial" << std::endl;
 	std::cout << std::endl;
 	std::cin >> num;
 	std::cout << std::endl;
@@ -63,6 +66,11 @@ int main() {
 		std::cout << "[Pembagian]" << std::endl;
 		std::cout << "Contoh input : 1(0^a)1(0^b)1" << std::endl;
 		std::cout << "Contoh output: 1(0^a)1(0^b)1(0^(a/b))" << std::endl;
+		break;
+	case 5:
+		std::cout << "[Faktorial]" << std::endl;
+		std::cout << "Contoh input : 1(0^a)1" << std::endl;
+		std::cout << "Contoh output: 1(0^a)1...1(0^a!)" << std::endl;
 		break;
 	}
 	std::cout << "Masukkan input: ";
