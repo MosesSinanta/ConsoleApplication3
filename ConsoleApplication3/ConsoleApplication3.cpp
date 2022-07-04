@@ -12,6 +12,7 @@
 #include "Multiplication.h"
 #include "Factorial.h"
 #include "PowerTwo.h"
+#include "LogBiner.h"
 #include "Display.h"
 
 typedef void (*arr) (std::vector<char> vct, int num);
@@ -31,7 +32,8 @@ int main() {
 		mul_q0,
 		div_q0,
 		fac_q0,
-		pow_q0
+		pow_q0,
+		log_q0
 	};
 
 	//Input
@@ -45,6 +47,7 @@ int main() {
 	std::cout << "[4] Pembagian" << std::endl;
 	std::cout << "[5] Faktorial" << std::endl;
 	std::cout << "[6] Pangkat 2" << std::endl;
+	std::cout << "[7] Logaritma Biner" << std::endl;
 	std::cout << std::endl;
 	std::cin >> num;
 	std::cout << std::endl;
@@ -79,6 +82,11 @@ int main() {
 		std::cout << "[Pangkat 2]" << std::endl;
 		std::cout << "Contoh input : 1(0^a)1" << std::endl;
 		std::cout << "Contoh output: 1(0^a)1(0^(2^a))" << std::endl;
+		break;
+	case 7:
+		std::cout << "[Logaritma Biner]" << std::endl;
+		std::cout << "Contoh input : 1(0^a)1" << std::endl;
+		std::cout << "Contoh output: 1(0^a)1(0^(log(2) a))" << std::endl;
 		break;
 	}
 	std::cout << "Masukkan input: ";

@@ -147,6 +147,7 @@
     <ClInclude Include="Factorial.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="FactorialMultiplication.h" />
+    <ClInclude Include="LogBiner.h" />
     <ClInclude Include="Multiplication.h" />
     <ClInclude Include="PowerTwo.h" />
     <ClInclude Include="Substraction.h" />
